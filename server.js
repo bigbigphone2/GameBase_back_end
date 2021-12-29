@@ -14,5 +14,5 @@ const users = require('./route/users');
 app.use('/', home);
 app.use('/api/posts', posts);
 app.use('/api/users', users);
-
-app.listen(3000,()=>console.log("Listening on port 3000"));
+let port = process.env.PORT || 3000;
+app.listen(port,()=>console.log("Listening on port 3000"));
