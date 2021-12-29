@@ -7,10 +7,11 @@ app.use(cors());
 app.use(express.json())
 
 
-
+const home = require('./route/home');
 const posts = require('./route/posts');
 const users = require('./route/users');
 //route
+app.use('/', home);
 app.use('/api/posts', posts);
 app.use('/api/users', users);
 
