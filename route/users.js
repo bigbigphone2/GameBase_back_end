@@ -8,7 +8,14 @@ const config = require('config');
 
 const pool = require("../db");
 const {validateUser} = require('../models/user');
-const { user } = require('pg/lib/defaults');
+// const { Client } = require('pg');
+
+// const client = new Client({
+//   connectionString: process.env.DATABASE_URL,
+//   ssl: {
+//     rejectUnauthorized: false
+//   }
+// });
 
 //view all user information
 router.get("/allUser", async(req,res) =>{
